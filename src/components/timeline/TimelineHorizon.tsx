@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { theme } from "../../styles/Theme";
 
-export const Timeline = () => {
+export const TimelineHorizon = () => {
     return (
         <StyledTimeline>
             <ContainerRight>
@@ -35,26 +35,28 @@ export const Timeline = () => {
 
 const StyledTimeline = styled.div`
     position: relative;
-    max-width: 328px;
+    max-width: 1142px;
     margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
 
-    &::after {
+    &:before {
         content: '';
         position: absolute;
-        width: 6px;
+        height: 8px;
+        left: 12%;
+        right: 12%;
+        top: 50px;
         background-image: ${theme.colors.accent};
-        top: 40px;
-        bottom: 20px;
-        /* left: 50%; */
-        /* margin-left: 9px; */
+        z-index: 1;
     }
 `
 
 const Content = styled.div`
-    padding: 20px 30px;
-    /* background-color: rgba(0, 0, 0, 0.5); */
     position: relative;
-    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 `
 
 const ContainerRight = styled.div`
@@ -68,9 +70,10 @@ const ContainerRight = styled.div`
         position: absolute;
         width: 25px;
         height: 25px;
-        left: -9px;
         background-color: white;
-        top: 30px;
+        top: 40px;
+        left: 50%;
+        transform: translateX(-50%);
         border-radius: 50%;
         z-index: 1;
     }
@@ -82,12 +85,16 @@ const ContentTitle = styled.h2`
     line-height: 100%;
     letter-spacing: 0%;
 
-    margin-bottom: 10px;
+    margin-bottom: 40px;
 `
 
 const Text = styled.p`
     font-weight: 500;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 100%;
     letter-spacing: 0%;
+    text-align: center;
+    line-height: 1.5em;
+
+    max-width: 260px;
 `
