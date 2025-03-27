@@ -5,6 +5,7 @@ import { Icon } from "../../../components/icon/Icon";
 import imgProgress from "../../../assets/imeges/Skills.png";
 import { Container } from "../../../components/Container";
 import { FlexWrapper } from "../../../components/FlexWrapper";
+import { Skill } from "../../../components/skill/Skill";
 
 export const Technologies = () => {
     return (
@@ -13,7 +14,7 @@ export const Technologies = () => {
                 <SectionTitle>Technologies</SectionTitle>
                 <FlexWrapper direction={"column"} align={"center"}>                    
                     <SectionProgress>
-                        <Image src={imgProgress} />
+                        <Skill />
                     </SectionProgress>
                     <Text>Additional technologies and skills</Text>
                     <FlexWrapper columnGap={"50px"}>
@@ -32,7 +33,8 @@ const StyledTechnologies = styled.section`
 `
 
 const SectionProgress = styled.div`
-    
+    max-width: 900px;
+    width: 100%;
 `
 
 const Image = styled.img`
