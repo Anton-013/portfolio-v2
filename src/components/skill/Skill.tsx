@@ -3,13 +3,22 @@ import styled from "styled-components";
 import { theme } from "../../styles/Theme";
 import { FlexWrapper } from "../FlexWrapper";
 
-export const Skill = () => {
+type SkillPropsType = {
+    skillName: string
+    skillProcent: string
+}
+
+type ProgressPropsType = {
+    procent?: string
+}
+
+export const Skill = (props: SkillPropsType) => {
     return (
         <StyledSkill>
             <FlexWrapper direction={"column"} align={"flex-start"}>
-                <SkillTitle>Html</SkillTitle>
+                <SkillTitle>{props.skillName}</SkillTitle>
                 <ProgressBar>
-                    <Progress />
+                    <Progress procent={props.skillProcent}/>
                 </ProgressBar>
             </FlexWrapper>
         </StyledSkill>
@@ -27,7 +36,7 @@ const SkillTitle = styled.span`
     letter-spacing: 0%;
 
     margin-left: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 `
 
 const ProgressBar = styled.div`
@@ -38,9 +47,9 @@ const ProgressBar = styled.div`
     background-color: ${theme.colors.progressBg};
 `
 
-const Progress = styled.div`
-    width: 50%;
+const Progress = styled.div<ProgressPropsType>`
+    width: ${props => props.procent || "1%"};
     height: 18px;
     border-radius: 9px;
-    background-color: white;
+    background-image: ${theme.colors.accent};
 `

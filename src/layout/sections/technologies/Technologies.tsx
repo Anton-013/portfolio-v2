@@ -2,10 +2,11 @@ import React from "react";
 import styled from "styled-components";
 import { SectionTitle } from "../../../components/SectionTitle";
 import { Icon } from "../../../components/icon/Icon";
-import imgProgress from "../../../assets/imeges/Skills.png";
 import { Container } from "../../../components/Container";
 import { FlexWrapper } from "../../../components/FlexWrapper";
 import { Skill } from "../../../components/skill/Skill";
+import { SectionProgress } from "../../../components/sectionProgress/SectionProgress";
+
 
 export const Technologies = () => {
     return (
@@ -13,9 +14,7 @@ export const Technologies = () => {
             <Container>
                 <SectionTitle>Technologies</SectionTitle>
                 <FlexWrapper direction={"column"} align={"center"}>                    
-                    <SectionProgress>
-                        <Skill />
-                    </SectionProgress>
+                    <SectionProgress />
                     <Text>Additional technologies and skills</Text>
                     <FlexWrapper columnGap={"50px"}>
                         <Icon iconId={"skillGit"} width={"100"} height={"100"} viewBox={"0 0 100 100"} />
@@ -32,10 +31,7 @@ const StyledTechnologies = styled.section`
     background-color: grey;
 `
 
-const SectionProgress = styled.div`
-    max-width: 900px;
-    width: 100%;
-`
+
 
 const Image = styled.img`
     width: 900px;
