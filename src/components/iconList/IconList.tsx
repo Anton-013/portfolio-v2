@@ -26,6 +26,7 @@ export const IconList = () => {
 
 const StyledIconList = styled.ul`
     display: flex;
+    align-items: center;
     gap: 25px;
 
     svg:hover {

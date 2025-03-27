@@ -1,29 +1,37 @@
 import React from "react";
 import styled from "styled-components";
 import { IconList } from "../../components/iconList/IconList";
+import { theme } from "../../styles/Theme";
+import { Container } from "../../components/Container";
+import { FlexWrapper } from "../../components/FlexWrapper";
 
 export const Footer = () => {
     return (
         <StyledFooter>
-            <Contacts>
-                <Phone>
-                    <Text>Call me:</Text>
-                    <Text>123-456-789</Text>
-                </Phone>
-                <Email>
-                    <Text>Email:</Text>
-                    <Text>xxx@xyz.com</Text>
-                </Email>
-            </Contacts>
-            <IconList />
+            <Container>
+                <FlexWrapper justify={"space-between"}>
+                    <Contacts>
+                        <PhoneBlock>
+                            <Text>Call me:</Text>
+                            <Text>123-456-789</Text>
+                        </PhoneBlock>
+                        <EmailBlock>
+                            <Text>Email:</Text>
+                            <Text>xxx@xyz.com</Text>
+                        </EmailBlock>
+                    </Contacts>
+                    <IconList />
+                </FlexWrapper>
+            </Container>
         </StyledFooter>
     )
 }
 
 const StyledFooter = styled.footer`
-    background-color: grey;
+    min-height: 150px;
+    background-color: ${theme.colors.primaryBg};
     display: flex;
-    justify-content: space-around;
+    align-items: center;
 `
 
 const Contacts = styled.div`
@@ -31,12 +39,13 @@ const Contacts = styled.div`
     gap: 30px;
 `
 
-const Phone = styled.div`
+const PhoneBlock = styled.div`
     display: flex;
     flex-direction: column;
+    margin-right: 162px;
 `
 
-const Email = styled.div`
+const EmailBlock = styled.div`
     display: flex;
     flex-direction: column;
 `
