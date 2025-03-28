@@ -16,7 +16,9 @@ export const Main = () => {
                         <Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </Text>
                         <Button>Let’s Begin</Button>
                     </BlockText>
-                    <Photo src={photo} alt="" />                   
+                    <PhotoBorder>
+                        <Photo src={photo} alt="" />   
+                    </PhotoBorder>                                    
                 </FlexWrapper>
             </Container>
         </StyledMain>
@@ -55,11 +57,20 @@ const Text = styled.p`
 `
 
 const Photo = styled.img`
-    width: 380px;
-    height: 450px;
+    width: 370px;
+    height: 440px;
     object-fit: cover;
-    border: 10px solid skyblue;
+    /* border: 10px solid skyblue;
     border-image: ${theme.colors.accent};
-    border-image-slice: 1;
+    border-image-slice: 1; */
     border-radius: 50px 0 50px 0;
+    margin: 5px;
+`
+
+const PhotoBorder = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: ${theme.colors.accent};
+    border-radius: 55px 0 55px 0;
 `
