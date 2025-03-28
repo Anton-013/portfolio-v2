@@ -26,9 +26,12 @@ export const SectionProgress = () => {
         <StyledSectionProgress>
 
             {skillData.map((s, index)=>{
-                return <Skill skillName={s.skillName} skillProcent={s.skillProcent} key={index}/>
+                return <Skill 
+                    skillName={s.skillName}
+                    skillProcent={s.skillProcent}
+                    key={index}/>
             })}
-            
+
         </StyledSectionProgress>
     )
 }

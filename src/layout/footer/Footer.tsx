@@ -13,11 +13,11 @@ export const Footer = () => {
                     <Contacts>
                         <PhoneBlock>
                             <Text>Call me:</Text>
-                            <Text>123-456-789</Text>
+                            <Tel>123-456-789</Tel>
                         </PhoneBlock>
                         <EmailBlock>
                             <Text>Email:</Text>
-                            <Text>xxx@xyz.com</Text>
+                            <Email>xxx@xyz.com</Email>
                         </EmailBlock>
                     </Contacts>
                     <IconList />
@@ -51,5 +51,21 @@ const EmailBlock = styled.div`
 `
 
 const Text = styled.span`
+    
+`
+
+const Tel = styled.a.attrs( () => (
+    {
+        type: "tel",
+    }
+))`
+    
+`
+
+const Email = styled.a.attrs( () => (
+    {
+        type: "email",
+    }
+))`
     
 `
