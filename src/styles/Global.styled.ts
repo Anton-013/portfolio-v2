@@ -25,6 +25,10 @@ export const GlobalStyle = createGlobalStyle`
 
     a:hover {
         scale: 0.9;
+        background-image: ${theme.colors.accent};
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
     }
 
     ul {

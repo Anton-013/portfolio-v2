@@ -24,4 +24,6 @@ export const Header = () => {
 
 const StyledHeader = styled.header`
     background-color: ${theme.colors.primaryBg};
+    position: fixed;
+    width: 100%;
 `
