@@ -6,5 +6,10 @@ export const theme = {
         progressBg: "#162950",
 
         font: "#ffffff",
-    }
+    },
+
+    media: {
+        tablet: "screen and (max-width: 768px)",
+        mobile: "screen and (max-width: 576px)",
+    },
 }

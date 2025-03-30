@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { theme } from "../../styles/Theme";
 
 export const Menu = () => {
     return (
@@ -27,5 +28,9 @@ const StyledMenu = styled.nav`
 
     li:hover {
         scale: 0.9;
+    }
+
+    @media ${theme.media.tablet} {
+        display: none;
     }
 `
