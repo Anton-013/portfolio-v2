@@ -5,12 +5,13 @@ import { FlexWrapper } from "../../../components/FlexWrapper";
 import { Button } from "../../../components/Button";
 import { Container } from "../../../components/Container";
 import { theme } from "../../../styles/Theme";
+import { font } from "../../../styles/Common";
 
 export const Main = () => {
     return (
         <StyledMain>
             <Container>
-                <FlexWrapper justify="space-between" align="center">
+                <FlexWrapper justify={"space-around"} align={"center"} columnGap={"40px"} rowGap={"50px"} wrap={"wrap-reverse"}>
                     <BlockText>
                         <MainTitle>Lorem ipsum dolor amet</MainTitle>
                         <Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </Text>
@@ -33,27 +34,29 @@ const StyledMain = styled.section`
 const BlockText = styled.div`
     display: flex;
     flex-direction: column;
+    max-width: 673px;
 `
 
 const MainTitle = styled.h1`
+    ${font({family: '"Poppins"', weight: 600, Fmax: 54, Fmin: 36})}
     text-align: left;
-    font-family: Poppins;
-    font-weight: 600;
-    font-size: 54px;
     line-height: 100%;
     letter-spacing: 0%;
 `
 
 const Text = styled.p`
+    ${font({family: "'Poppins'", weight: 500, Fmax: 18, Fmin: 16})}
     text-align: left;
-    font-family: Poppins;
-    font-weight: 500;
-    font-size: 18px;
     line-height: 100%;
     letter-spacing: 0%;
 
     margin-top: 15px;
     margin-bottom: 60px;
+
+    @media ${theme.media.mobile} {
+        margin-top: 25px;
+        margin-bottom: 40px;
+    }
 `
 
 const Photo = styled.img`
@@ -65,6 +68,11 @@ const Photo = styled.img`
     border-image-slice: 1; */
     border-radius: 50px 0 50px 0;
     margin: 5px;
+
+    @media ${theme.media.mobile} {
+        width: 325px;
+        height: 390px;
+    }
 `
 
 const PhotoBorder = styled.div`
