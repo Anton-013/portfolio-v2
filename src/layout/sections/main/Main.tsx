@@ -27,8 +27,10 @@ export const Main = () => {
 }
 
 const StyledMain = styled.section`
-    min-height: 80vh;
+    min-height: 100vh;
     background-color: #2f4b69;
+    display: flex;
+    align-items: center;
 `
 
 const BlockText = styled.div`
