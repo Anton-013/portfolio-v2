@@ -26,6 +26,7 @@ export const IconList = () => {
 
 const StyledIconList = styled.ul`
     display: flex;
+    justify-content: center;
     align-items: center;
     gap: 25px;
 

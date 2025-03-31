@@ -29,4 +29,5 @@ const StyledHeader = styled.header`
     background-color: ${theme.colors.primaryBg};
     position: fixed;
     width: 100%;
+    z-index: 99999999;
 `
