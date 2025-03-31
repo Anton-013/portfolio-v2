@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { theme } from "../../styles/Theme";
+import { font } from "../../styles/Common";
 
 export const TimelineVertical = () => {
     return (
@@ -34,6 +35,7 @@ export const TimelineVertical = () => {
 }
 
 const StyledTimeline = styled.div`
+    display: none;
     position: relative;
     max-width: 328px;
     margin: 0 auto;
@@ -48,11 +50,14 @@ const StyledTimeline = styled.div`
         /* left: 50%; */
         /* margin-left: 9px; */
     }
+
+    @media ${theme.media.tablet} {
+        display: block;
+    }
 `
 
 const Content = styled.div`
     padding: 20px 30px;
-    /* background-color: rgba(0, 0, 0, 0.5); */
     position: relative;
     border-radius: 6px;
 `
@@ -86,8 +91,7 @@ const ContentTitle = styled.h2`
 `
 
 const Text = styled.p`
-    font-weight: 500;
-    font-size: 16px;
+    ${font({weight: 500, Fmax: 18, Fmin: 16})}
     line-height: 100%;
     letter-spacing: 0%;
 `

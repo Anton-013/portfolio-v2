@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { theme } from "../../styles/Theme";
+import { font } from "../../styles/Common";
 
 export const TimelineHorizon = () => {
     return (
@@ -50,6 +51,10 @@ const StyledTimeline = styled.div`
         background-image: ${theme.colors.accent};
         z-index: 1;
     }
+
+    @media ${theme.media.tablet} {
+        display: none;
+    }
 `
 
 const Content = styled.div`
@@ -89,8 +94,7 @@ const ContentTitle = styled.h2`
 `
 
 const Text = styled.p`
-    font-weight: 500;
-    font-size: 18px;
+    ${font({weight: 500, Fmax: 18, Fmin: 16})}
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
