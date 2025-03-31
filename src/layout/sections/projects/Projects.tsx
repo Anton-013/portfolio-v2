@@ -11,23 +11,23 @@ export const Projects = () => {
         <StyledProjects>
             <Container>
                 <SectionTitle>Projects</SectionTitle>
-                <FlexWrapper justify="space-around" wrap="wrap" rowGap={"60px"}>
+                <FlexWrapper justify="space-around" wrap="wrap" rowGap={"60px"} columnGap={"20px"}>
                     <Project
                         src={projectImg1}
-                        title={"PROJECT 1"}
-                        text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."} />
+                        projectTitle={"PROJECT 1"}
+                        projectText={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."} />
                     <Project
                         src={projectImg1}
-                        title={"PROJECT 2"}
-                        text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."} />
+                        projectTitle={"PROJECT 2"}
+                        projectText={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."} />
                     <Project
                         src={projectImg1}
-                        title={"PROJECT 3"}
-                        text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."} />
+                        projectTitle={"PROJECT 3"}
+                        projectText={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."} />
                     <Project
                         src={projectImg1}
-                        title={"PROJECT 4"}
-                        text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."} />
+                        projectTitle={"PROJECT 4"}
+                        projectText={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."} />
                 </FlexWrapper>
             </Container>
         </StyledProjects>

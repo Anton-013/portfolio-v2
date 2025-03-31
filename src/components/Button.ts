@@ -1,15 +1,15 @@
 import styled from "styled-components";
 import { theme } from "../styles/Theme";
+import { font } from "../styles/Common"
 
 export const Button = styled.button`
+    ${font({family: '"Poppins"', weight: 600, Fmax: 20, Fmin: 18})}
     width: 240px;
     height: 60px;
     background-image: ${theme.colors.accent};
     border-radius: 30px;
     color: ${theme.colors.font};
-    font-family: Poppins;
-    font-weight: 600;
-    font-size: 20px;
+    
     line-height: 100%;
     letter-spacing: 0%;
 

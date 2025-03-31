@@ -2,20 +2,20 @@ import React from "react";
 import styled from "styled-components";
 import { theme } from "../../../../styles/Theme";
 import { Button } from "../../../../components/Button";
-import { FlexWrapper } from "../../../../components/FlexWrapper";
+import { font } from "../../../../styles/Common";
 
 type ProjectPropsType = {
     src: string
-    title: string
-    text: string
+    projectTitle: string
+    projectText: string
 }
 
 export const Project = (props: ProjectPropsType) => {
     return (
         <StyledProject>              
                 <Image src={props.src} alt="" />
-                <Title>{props.title}</Title>
-                <Text>{props.text}</Text>
+                <Title>{props.projectTitle}</Title>
+                <Text>{props.projectText}</Text>
                 <Button>Look It Up</Button>
         </StyledProject>
     )
@@ -34,6 +34,7 @@ const StyledProject = styled.div`
     }
 
     max-width: 550px;
+    width: 100%;
     max-height: 670px;
     background-color: ${theme.colors.primaryBg};
     padding: 25px 25px 40px 25px;
@@ -41,6 +42,7 @@ const StyledProject = styled.div`
 
 const Image = styled.img`
     max-width: 500px;
+    width: 100%;
     max-height: 280px;
     object-fit: cover;
     border-radius: 24px 8px 8px 8px;
@@ -48,10 +50,7 @@ const Image = styled.img`
 `
 
 const Title = styled.h3`
-    font-weight: 600;
-    font-size: 30px;
-    line-height: 89%;
-    letter-spacing: 0%;
+    ${font({weight: 600, lineHeight: 0.89, Fmax: 30, Fmin: 24})}
     margin-bottom: 68px;
     position: relative;
 
@@ -69,9 +68,7 @@ const Title = styled.h3`
 `
 
 const Text = styled.p`
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 100%;
+    ${font({weight: 500, Fmax: 18, Fmin: 16})}
     letter-spacing: 0%;
     margin-bottom: 50px;
     text-align: start;
