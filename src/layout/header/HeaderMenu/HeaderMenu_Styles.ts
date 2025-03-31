@@ -1,43 +1,34 @@
-import React from "react";
-import styled, { css } from "styled-components";
-import { theme } from "../../styles/Theme";
-import { IconListPopup } from "../iconListPopup/IconListPopup";
+import styled, { css } from "styled-components"
+import { theme } from "../../../styles/Theme"
 
-export const MobileMenu = () => {
-    return (
-        <StyledMobileMenu>
+// Menu
 
-            <BurgerButton isOpen={false}>
-                <span></span>
-            </BurgerButton>
+const Menu = styled.nav`
+    ul {
+        display: flex;
+        gap: 30px;
+    }
 
-            <MobileMenuPopup isOpen={false}>
-                <ul>
-                    <li>
-                        <a href="">Projects</a>
-                    </li>
-                    <li>
-                        <a href="">Technologies</a>
-                    </li>
-                    <li>
-                        <a href="">About me</a>
-                    </li>
-                </ul>
-                <IconListPopup />
-            </MobileMenuPopup>
-        </StyledMobileMenu>
-    )
-}
-
-const StyledMobileMenu = styled.nav`
-    display: none;
-
-    @media ${theme.media.tablet} {
-        display: block;
+    li:hover {
+        scale: 0.9;
     }
 `
 
-const MobileMenuPopup = styled.div<{isOpen: boolean}>`
+// DesktopMenu
+
+const DesktopMenu = styled.div`
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+`
+
+// MobileMenu
+
+const MobileMenu = styled.nav`
+
+`
+
+const Popup = styled.div<{isOpen: boolean}>`
     position: fixed;
     top: 0;
     right: 0;
@@ -123,3 +114,11 @@ const BurgerButton = styled.button<{isOpen: boolean}>`
         }
     }
 `
+
+export const S = {
+    Menu,
+    DesktopMenu,
+    MobileMenu,
+    Popup,
+    BurgerButton,
+}

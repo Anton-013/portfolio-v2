@@ -30,10 +30,6 @@ const StyledIconListHeader = styled.ul`
     align-items: center;
     gap: 25px;
 
-    @media ${theme.media.tablet} {
-        display: none;
-    }
-
     svg:hover {
         scale: 0.9;
     }
