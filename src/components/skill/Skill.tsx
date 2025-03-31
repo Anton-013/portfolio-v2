@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { theme } from "../../styles/Theme";
 import { FlexWrapper } from "../FlexWrapper";
+import { font } from "../../styles/Common";
 
 type SkillPropsType = {
     skillName: string
@@ -30,8 +31,7 @@ const StyledSkill = styled.div`
 `
 
 const SkillTitle = styled.span`
-    font-weight: 600;
-    font-size: 24px;
+    ${font({weight: 600, Fmax: 24, Fmin: 22})}
     line-height: 100%;
     letter-spacing: 0%;
 
