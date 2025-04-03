@@ -21,7 +21,7 @@ const skillData = [
     },
 ]
 
-export const SectionProgress = () => {
+export const SectionProgress: React.FC = () => {
     return (
         <StyledSectionProgress>
 

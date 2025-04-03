@@ -41,9 +41,6 @@ const Photo = styled.img`
     width: 370px;
     height: 440px;
     object-fit: cover;
-    /* border: 10px solid skyblue;
-    border-image: ${theme.colors.accent};
-    border-image-slice: 1; */
     border-radius: 50px 0 50px 0;
     margin: 5px;
 
