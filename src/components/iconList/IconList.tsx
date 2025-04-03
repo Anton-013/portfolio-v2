@@ -2,7 +2,7 @@ import React from "react";
 import { Icon } from "../icon/Icon";
 import styled from "styled-components";
 
-export const IconList = () => {
+export const IconList: React.FC = () => {
     return (
         <StyledIconList>
             <li>
