@@ -1,16 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import { S } from "../HeaderMenu_Styles";
 import { IconList } from "../../../../components/iconList/IconList";
 
 export const MobileMenu: React.FC = () => {
+
+    const [menuIsOpen, setmenuIsOpen] = useState(false)
+    const onBurgerBtnClick = () => { setmenuIsOpen( !menuIsOpen ) }
+
     return (
         <S.MobileMenu>
 
-            <S.BurgerButton isOpen={false}>
+            <S.BurgerButton isOpen={menuIsOpen} onClick={ onBurgerBtnClick }>
                 <span></span>
             </S.BurgerButton>
 
-            <S.Popup isOpen={false}>
+            <S.Popup isOpen={menuIsOpen} onClick={ () => { setmenuIsOpen(false) } }>
                 <ul>
                     <li>
                         <a href="">Projects</a>
