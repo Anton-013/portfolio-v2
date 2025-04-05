@@ -35,6 +35,10 @@ const Text = styled.p`
         margin-top: 25px;
         margin-bottom: 40px;
     }
+
+    p {
+        display: none;
+    }
 `
 
 const Photo = styled.img`
