@@ -1,4 +1,5 @@
 import './App.css'
+import { Particle } from './components/particle/Particle'
 import { Footer } from './layout/footer/Footer'
 import { Header } from './layout/header/Header'
 import { Experience } from './layout/sections/experience/Experience'
@@ -10,6 +11,7 @@ function App() {
 
   return (
     <>
+      <Particle />
       <Header />
       <Main />
       <Projects />

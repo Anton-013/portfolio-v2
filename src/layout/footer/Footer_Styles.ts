@@ -9,6 +9,7 @@ const Footer = styled.footer`
     display: flex;
     align-items: center;
     padding: 40px 0;
+    position: relative;
 `
 
 const FlexWrap = styled.div`

@@ -3,7 +3,7 @@ import { font } from "../../../styles/Common"
 import { theme } from "../../../styles/Theme"
 
 const Technologies = styled.section`
-
+    position: relative;
 `
 
 const Text = styled.h3`

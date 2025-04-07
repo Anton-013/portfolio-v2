@@ -16,7 +16,6 @@ export const Main: React.FC = () => {
 
                     <S.BlockText>
                         <S.MainTitle>Lorem ipsum dolor amet</S.MainTitle>
-                        {/* <S.Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </S.Text> */}
                         <S.Text>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                             <Typewriter
