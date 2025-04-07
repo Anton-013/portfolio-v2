@@ -50,13 +50,21 @@ const Tel = styled.a.attrs(() => (
     {
         type: "tel",
     }
-))``
+))`
+    &:hover {
+        cursor: pointer;
+    }
+`
 
 const Email = styled.a.attrs(() => (
     {
         type: "email",
     }
-))``
+))`
+    &:hover {
+        cursor: pointer;
+    }
+`
 
 export const S = {
     Footer,
