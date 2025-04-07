@@ -5,6 +5,7 @@ import { Button } from "../../../components/Button";
 import { Container } from "../../../components/Container";
 import { S } from "./Main_Styles";
 import Typewriter from "typewriter-effect";
+import Tilt from "react-parallax-tilt";
 
 export const Main: React.FC = () => {
     return (
@@ -30,13 +31,23 @@ export const Main: React.FC = () => {
                         <Button>Let’s Begin</Button>
                     </S.BlockText>
 
-                    <S.PhotoBorder>
-                        <S.Photo src={photo} alt="Photo" />
-                    </S.PhotoBorder>
+                    <Tilt
+                        className="parallax-effect-img"
+                        tiltMaxAngleX={40}
+                        tiltMaxAngleY={40}
+                        perspective={800}
+                        transitionSpeed={1500}
+                        scale={1.02}
+                        gyroscope={true}
+                    >
+                        <S.PhotoBorder>
+                            <S.Photo src={photo} alt="Photo" />
+                        </S.PhotoBorder>
+                    </Tilt>
 
                 </FlexWrapper>
             </Container>
-            
+
         </S.Main>
     )
 }
