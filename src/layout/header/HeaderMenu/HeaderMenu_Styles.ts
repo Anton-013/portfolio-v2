@@ -1,5 +1,6 @@
 import styled, { css } from "styled-components"
 import { theme } from "../../../styles/Theme"
+import { Link } from "react-scroll"
 
 // Menu
 
@@ -11,6 +12,26 @@ const Menu = styled.nav`
 
     li:hover {
         scale: 0.9;
+    }
+
+    @media ${theme.media.tablet} {
+        ul {
+            flex-direction: column;
+        }
+    }
+`
+
+const NavLink = styled(Link)`
+    cursor: pointer;
+    text-decoration: none;
+    color: ${theme.colors.font};
+
+    &:hover, &.active {
+        scale: 0.9;
+        background-image: ${theme.colors.accent};
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
     }
 `
 
@@ -117,6 +138,7 @@ const BurgerButton = styled.button<{isOpen: boolean}>`
 
 export const S = {
     Menu,
+    NavLink,
     DesktopMenu,
     MobileMenu,
     Popup,

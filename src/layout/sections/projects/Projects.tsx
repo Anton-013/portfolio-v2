@@ -31,7 +31,7 @@ const projectData = [
 
 export const Projects: React.FC = () => {
     return (
-        <S.Projects>
+        <S.Projects id={"projects"}>
             <Container>
                 <SectionTitle>Projects</SectionTitle>
                 <FlexWrapper justify="space-around" wrap="wrap" rowGap={"60px"} columnGap={"20px"}>

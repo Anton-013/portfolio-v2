@@ -10,9 +10,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@types/react-scroll": "^1.8.10",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-parallax-tilt": "^1.7.289",
+    "react-scroll": "^1.9.3",
     "react-tsparticles": "^2.12.2",
     "styled-components": "^6.1.16",
     "tsparticles": "^3.8.1",

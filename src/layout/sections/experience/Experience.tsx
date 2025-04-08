@@ -36,7 +36,7 @@ export const Experience: React.FC = () => {
     }, []);
 
     return (
-        <StyledExperience>
+        <StyledExperience id={"about"}>
             <Container>
                 <SectionTitle>Experience</SectionTitle>
                 {width < breakpoint ? <TimelineVertical /> : <TimelineHorizon />}

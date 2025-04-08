@@ -9,7 +9,7 @@ import { S } from "./Technologies_Styles";
 
 export const Technologies: React.FC = () => {
     return (
-        <S.Technologies>
+        <S.Technologies id={"technologies"}>
             <Container>
                 <SectionTitle>Technologies</SectionTitle>
                 <FlexWrapper direction={"column"} align={"center"}>                    

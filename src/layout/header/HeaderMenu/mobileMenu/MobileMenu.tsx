@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { S } from "../HeaderMenu_Styles";
 import { IconList } from "../../../../components/iconList/IconList";
+import { Menu } from "../menu/Menu";
 
 export const MobileMenu: React.FC = () => {
 
@@ -15,7 +16,8 @@ export const MobileMenu: React.FC = () => {
             </S.BurgerButton>
 
             <S.Popup isOpen={menuIsOpen} onClick={ () => { setmenuIsOpen(false) } }>
-                <ul>
+                <Menu />
+                {/* <ul>
                     <li>
                         <a href="">Projects</a>
                     </li>
@@ -25,7 +27,7 @@ export const MobileMenu: React.FC = () => {
                     <li>
                         <a href="">About me</a>
                     </li>
-                </ul>
+                </ul> */}
                 <IconList />
             </S.Popup>
         </S.MobileMenu>
