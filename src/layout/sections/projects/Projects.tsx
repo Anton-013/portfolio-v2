@@ -5,6 +5,7 @@ import { Project } from "./project/Project";
 import projectImg1 from "../../../assets/imeges/project.png";
 import { Container } from "../../../components/Container";
 import { S } from "./Projects_Styles";
+import { Fade } from "react-awesome-reveal";
 
 const projectData = [
     {
@@ -35,16 +36,16 @@ export const Projects: React.FC = () => {
             <Container>
                 <SectionTitle>Projects</SectionTitle>
                 <FlexWrapper justify="space-around" wrap="wrap" rowGap={"60px"} columnGap={"20px"}>
-
-                    {projectData.map((p, index) => {
-                        return (
-                            <Project
-                                src={p.src} key={index}
-                                projectTitle={p.projectTitle}
-                                projectText={p.projectText} />
-                        )
-                    })}
-
+                    <Fade>
+                        {projectData.map((p, index) => {
+                            return (
+                                <Project
+                                    src={p.src} key={index}
+                                    projectTitle={p.projectTitle}
+                                    projectText={p.projectText} />
+                            )
+                        })}
+                    </Fade>
                 </FlexWrapper>
             </Container>
         </S.Projects>
