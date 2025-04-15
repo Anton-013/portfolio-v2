@@ -100,9 +100,11 @@ const BurgerButton = styled.button<{isOpen: boolean}>`
         position: absolute;
         left: 40px;
         bottom: 70px;
+        transition: background-color 1s;
 
         ${props => props.isOpen && css<{isOpen: boolean}>`
             background-color: rgba(255, 255, 255, 0);
+            transition: background-color 1s;
         `}
 
         &::before {
@@ -113,9 +115,11 @@ const BurgerButton = styled.button<{isOpen: boolean}>`
             background-color: ${theme.colors.font};
             position: absolute;
             transform: translateY(-10px);
+            transition: transform 1s;
 
             ${props => props.isOpen && css<{isOpen: boolean}>`
                 transform: rotate(-45deg) translateY(0);
+                transition: transform 1s;
             `}
         }
 
@@ -126,11 +130,14 @@ const BurgerButton = styled.button<{isOpen: boolean}>`
             height: 2px;
             background-color: ${theme.colors.font};
             position: absolute;
-            transform: translateY(10px);
+            transform: translateY(10px);            
+            transition: transform 1s, width 1s;
 
             ${props => props.isOpen && css<{isOpen: boolean}>`
                 transform: rotate(45deg) translateY(0);
                 width: 36px;
+                
+                transition: transform 1s, width 1s;
             `}
         }
     }
