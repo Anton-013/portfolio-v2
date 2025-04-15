@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Skill } from "../skill/Skill";
+import { Fade } from "react-awesome-reveal";
 
 const skillData = [
     {
@@ -24,14 +25,14 @@ const skillData = [
 export const SectionProgress: React.FC = () => {
     return (
         <StyledSectionProgress>
-
-            {skillData.map((s, index)=>{
-                return <Skill 
-                    skillName={s.skillName}
-                    skillProcent={s.skillProcent}
-                    key={index}/>
-            })}
-
+            <Fade>
+                {skillData.map((s, index) => {
+                    return <Skill
+                        skillName={s.skillName}
+                        skillProcent={s.skillProcent}
+                        key={index} />
+                })}
+            </Fade>
         </StyledSectionProgress>
     )
 }
