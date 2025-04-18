@@ -1,6 +1,7 @@
 import React from "react";
 import { Icon } from "../icon/Icon";
 import styled from "styled-components";
+import { theme } from "../../styles/Theme";
 
 export const IconListHeader: React.FC = () => {
     return (
@@ -28,6 +29,10 @@ const StyledIconListHeader = styled.ul`
     display: flex;
     align-items: center;
     gap: 25px;
+
+    svg {
+        transition: ${theme.animations.transition};
+    }
 
     svg:hover {
         scale: 0.9;

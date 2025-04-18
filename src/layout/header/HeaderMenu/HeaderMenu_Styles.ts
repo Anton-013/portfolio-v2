@@ -10,6 +10,10 @@ const Menu = styled.nav`
         gap: 30px;
     }
 
+    li {
+        transition: .2s ease-in-out;
+    }
+
     li:hover {
         scale: 0.9;
     }
@@ -25,13 +29,13 @@ const NavLink = styled(Link)`
     cursor: pointer;
     text-decoration: none;
     color: ${theme.colors.font};
+    transition: ${theme.animations.transition};
 
     &:hover, &.active {
         scale: 0.9;
         background-image: ${theme.colors.accent};
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-
     }
 `
 
@@ -69,6 +73,7 @@ const Popup = styled.div<{isOpen: boolean}>`
 
     li {
         margin-bottom: 20px;
+        transition: ${theme.animations.transition};
     }
 
     &:ul {
